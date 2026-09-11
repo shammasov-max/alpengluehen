@@ -1,0 +1,582 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ALPENGLÜHEN — Das Österreich-Magazin | Reise, Genuss & Lebensart</title>
+<meta name="description" content="ALPENGLÜHEN ist das Premium-Magazin für Reise, Genuss und Lebensart in Österreich. Cinematische Alpenfotografie, Reiserouten, Hotelguides und Geheimtipps aus Wien, Salzburg, Tirol und dem Salzkammergut.">
+<meta name="theme-color" content="#18231B">
+<link rel="canonical" href="https://www.alpengluehen.at/">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALPENGLÜHEN">
+<meta property="og:locale" content="de_AT">
+<meta property="og:title" content="ALPENGLÜHEN — Das Österreich-Magazin">
+<meta property="og:description" content="Reise, Genuss & Lebensart aus dem Herzen der Alpen. Cinematische Fotografie, Reiserouten und Geheimtipps aus ganz Österreich.">
+<meta property="og:url" content="https://www.alpengluehen.at/">
+<meta property="og:image" content="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ALPENGLÜHEN — Das Österreich-Magazin">
+<meta name="twitter:description" content="Reise, Genuss & Lebensart aus dem Herzen der Alpen.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://www.alpengluehen.at/#website",
+      "url": "https://www.alpengluehen.at/",
+      "name": "ALPENGLÜHEN",
+      "description": "Das Premium-Magazin für Reise, Genuss und Lebensart in Österreich",
+      "inLanguage": "de-AT",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://www.alpengluehen.at/suche?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.alpengluehen.at/#org",
+      "name": "ALPENGLÜHEN Verlag",
+      "url": "https://www.alpengluehen.at/",
+      "logo": "https://www.alpengluehen.at/assets/img/favicon.svg",
+      "sameAs": ["https://www.instagram.com/", "https://www.facebook.com/", "https://www.pinterest.com/"]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container container--wide header-inner">
+    <a class="brand" href="index.html" aria-label="ALPENGLÜHEN — Startseite">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="22" cy="10" r="3.4" fill="#CBAA6E"/>
+        <path d="M2 27 L12 11 L18 21 L21.5 15 L30 27 Z" fill="currentColor"/>
+        <path d="M12 11 L15.6 17 L13.2 20 L10 14.6 Z" fill="#B08A4F"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Alpenglühen</span>
+        <span class="brand-sub">Das Österreich-Magazin</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="nav-link" href="wien.html">Wien</a>
+      <a class="nav-link" href="salzburg.html">Salzburg</a>
+      <a class="nav-link" href="tirol.html">Tirol</a>
+      <a class="nav-link" href="seen.html">Seen</a>
+      <a class="nav-link" href="wandern.html">Wandern</a>
+      <a class="nav-link" href="skifahren.html">Skifahren</a>
+      <a class="nav-link" href="kulinarik.html">Kulinarik</a>
+      <a class="nav-link" href="magazin.html">Magazin</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="kontakt.html">Kontakt</a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-brand">Alpenglühen</div>
+  <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+    <a href="index.html"><span class="idx">01</span> Startseite</a>
+    <a href="wien.html"><span class="idx">02</span> Wien</a>
+    <a href="salzburg.html"><span class="idx">03</span> Salzburg</a>
+    <a href="tirol.html"><span class="idx">04</span> Tirol</a>
+    <a href="seen.html"><span class="idx">05</span> Seen</a>
+    <a href="wandern.html"><span class="idx">06</span> Wandern</a>
+    <a href="skifahren.html"><span class="idx">07</span> Skifahren</a>
+    <a href="kulinarik.html"><span class="idx">08</span> Kulinarik</a>
+    <a href="magazin.html"><span class="idx">09</span> Magazin</a>
+    <a href="kontakt.html"><span class="idx">10</span> Kontakt</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <span>Servus &amp; herzlich willkommen</span>
+    <span>Wien · Salzburg · Tirol</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ HERO ============ -->
+<section class="hero" aria-label="Willkommen">
+  <div class="hero-media ph" data-theme="alpenglow">
+    <img class="ph-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80" alt="Alpenglühen über schneebedeckten Berggipfeln in der Abenddämmerung" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container container--wide hero-content">
+    <p class="eyebrow hero-kicker">Das Österreich-Magazin · Ausgabe Nr. 24</p>
+    <h1>Wo die Alpen zu glühen beginnen</h1>
+    <p class="hero-sub">Reise, Genuss und Lebensart aus dem Herzen Europas. Wir zeigen Ihnen das schöne Österreich — vom morgendlichen Kaffeehaus bis zur letzten Sonne auf den Gipfeln.</p>
+    <div class="hero-actions">
+      <a class="btn btn--primary" href="#regionen">Regionen entdecken <span class="arw">→</span></a>
+      <a class="btn btn--outline-light" href="magazin.html">Ins Magazin blättern</a>
+    </div>
+  </div>
+  <div class="container container--wide hero-meta">
+    <span>◷ Sommer/Herbst-Ausgabe</span>
+    <span>Servus aus Österreich</span>
+    <span>9 Bundesländer · 1 Leidenschaft</span>
+  </div>
+  <div class="scroll-cue"><span>Scrollen</span><span class="line"></span></div>
+</section>
+
+<!-- ============ EDITOR'S NOTE ============ -->
+<section class="section section--tight">
+  <div class="container container--narrow text-center">
+    <p class="eyebrow eyebrow--center eyebrow--plain reveal">Grüß Gott</p>
+    <p class="lead reveal d1 mt-2">Es gibt Momente, da steht die Zeit ein bisserl still: wenn die Sonne hinter dem Dachstein versinkt, wenn der erste Schnee auf den Almen liegt, wenn im Kaffeehaus die Melange dampft. <span class="serif-accent text-brass">Dieses Österreich</span> möchten wir mit Ihnen teilen.</p>
+    <p class="reveal d2 mt-2" style="color:var(--ink-mute); max-width:52ch; margin-inline:auto;">Kein Massentourismus, kein Hochglanz-Klischee — sondern echte Geschichten, verlässliche Tipps und Bilder, die man riechen möchte. Willkommen bei Alpenglühen.</p>
+  </div>
+</section>
+
+<!-- ============ REGIONS ============ -->
+<section class="section section--paper-2" id="regionen">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Die Regionen</p>
+      <h2>Vier Facetten, ein Land</h2>
+      <p>Von der Kaiserstadt bis zum Gletscher, vom smaragdgrünen See bis zur Mozartstadt — jede Region erzählt ihre eigene Geschichte. Wählen Sie Ihren Ausgangspunkt.</p>
+    </div>
+    <div class="grid grid-4">
+      <article class="card reveal">
+        <a href="wien.html" class="card-media ph zoom ratio-square" data-theme="city" aria-label="Wien entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=900&q=80" alt="Prachtvolle Architektur in Wien">
+          <span class="badge badge--brass">01 · Kaiserstadt</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Metropole</p>
+          <h3 class="card-title"><a href="wien.html">Wien</a></h3>
+          <p class="card-excerpt">Kaffeehaus-Kultur, Kaiserpracht und ein Schmäh, den es nur hier gibt.</p>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <a href="salzburg.html" class="card-media ph zoom ratio-square" data-theme="city" aria-label="Salzburg entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1516684732162-798a0062be99?auto=format&fit=crop&w=900&q=80" alt="Blick auf die Altstadt von Salzburg">
+          <span class="badge badge--brass">02 · Mozartstadt</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Barock &amp; Kultur</p>
+          <h3 class="card-title"><a href="salzburg.html">Salzburg</a></h3>
+          <p class="card-excerpt">Festspiele, Festung und Marille — die Bühne der Alpen.</p>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <a href="tirol.html" class="card-media ph zoom ratio-square" data-theme="meadow" aria-label="Tirol entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80" alt="Almwiese vor Tiroler Bergpanorama">
+          <span class="badge badge--brass">03 · Herz der Alpen</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Berg &amp; Tal</p>
+          <h3 class="card-title"><a href="tirol.html">Tirol</a></h3>
+          <p class="card-excerpt">Gipfel, die den Atem rauben, und Hütten, die ihn zurückgeben.</p>
+        </div>
+      </article>
+      <article class="card reveal d3">
+        <a href="seen.html" class="card-media ph zoom ratio-square" data-theme="lake" aria-label="Seen entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80" alt="Smaragdgrüner Bergsee im Salzkammergut">
+          <span class="badge badge--brass">04 · Salzkammergut</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Wasser &amp; Weite</p>
+          <h3 class="card-title"><a href="seen.html">Die Seen</a></h3>
+          <p class="card-excerpt">Wasser in einem Grün, für das andere Länder zahlen würden.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<section class="section--ink" aria-hidden="true">
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Servus</span><span>Gemütlichkeit</span><span>Marille</span><span>Almrausch</span><span>Kaiserschmarrn</span><span>Bergluft</span>
+      <span>Servus</span><span>Gemütlichkeit</span><span>Marille</span><span>Almrausch</span><span>Kaiserschmarrn</span><span>Bergluft</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SEASONAL RECOMMENDATIONS ============ -->
+<section class="section">
+  <div class="container container--wide">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Was heuer Saison hat</p>
+      <h2>Österreich, das ganze Jahr</h2>
+      <p>Jede Jahreszeit hat ihren eigenen Zauber. Hier unsere Empfehlungen der Redaktion — vom Marillenblüten-Frühling bis zum Advent im Schnee.</p>
+    </div>
+
+    <div class="tabs reveal" data-tabs>
+      <div class="tablist" role="tablist" aria-label="Jahreszeiten">
+        <button class="tab" role="tab" aria-selected="true" id="tab-fr" aria-controls="panel-fr"><span class="season-ico">✿</span>Frühling</button>
+        <button class="tab" role="tab" aria-selected="false" id="tab-so" aria-controls="panel-so"><span class="season-ico">☀</span>Sommer</button>
+        <button class="tab" role="tab" aria-selected="false" id="tab-he" aria-controls="panel-he"><span class="season-ico">❦</span>Herbst</button>
+        <button class="tab" role="tab" aria-selected="false" id="tab-wi" aria-controls="panel-wi"><span class="season-ico">❄</span>Winter</button>
+      </div>
+
+      <div class="tab-panel is-active" role="tabpanel" id="panel-fr" aria-labelledby="tab-fr">
+        <div class="feature feature--split">
+          <div class="feature-media ratio-wide ph reveal-img" data-theme="meadow">
+            <img class="ph-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1100&q=80" alt="Frühlingswiese mit blühenden Bäumen">
+          </div>
+          <div class="feature-body">
+            <p class="overline-num">Von März bis Mai</p>
+            <h3>Wenn die Marillen blühen</h3>
+            <p class="prose">In der Wachau verwandeln sich im Frühjahr die Hänge in ein weißrosa Blütenmeer. Radeln Sie entlang der Donau, kosten Sie den ersten Marillenschnaps beim Heurigen und lassen Sie sich vom Duft der frischen Bergluft davontragen.</p>
+            <ul class="timeline-tags">
+              <li class="chip chip--fill">Marillenblüte Wachau</li>
+              <li class="chip chip--fill">Radtour an der Donau</li>
+              <li class="chip chip--fill">Erste Almwanderung</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-so" aria-labelledby="tab-so">
+        <div class="feature feature--split">
+          <div class="feature-media ratio-wide ph reveal-img" data-theme="lake">
+            <img class="ph-img" src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1100&q=80" alt="Baden in einem klaren Bergsee im Sommer">
+          </div>
+          <div class="feature-body">
+            <p class="overline-num">Von Juni bis August</p>
+            <h3>Ins kühle Nass springen</h3>
+            <p class="prose">Wenn's in der Stadt heiß wird, ruft das Salzkammergut. Der Wolfgangsee, der Attersee, der Wörthersee — Trinkwasserqualität und eine Bergkulisse gratis dazu. Danach eine Jause am Steg, und der Sommer ist perfekt.</p>
+            <ul class="timeline-tags">
+              <li class="chip chip--fill">Baden im Attersee</li>
+              <li class="chip chip--fill">Sonnenaufgangs-Tour</li>
+              <li class="chip chip--fill">Almhütten-Jause</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-he" aria-labelledby="tab-he">
+        <div class="feature feature--split">
+          <div class="feature-media ratio-wide ph reveal-img" data-theme="dusk">
+            <img class="ph-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1100&q=80" alt="Herbstlicher Bergwald im Nebel">
+          </div>
+          <div class="feature-body">
+            <p class="overline-num">Von September bis November</p>
+            <h3>Goldener Herbst &amp; Almabtrieb</h3>
+            <p class="prose">Der Herbst ist heimlich die schönste Zeit: klare Fernsicht, geschmückte Kühe beim Almabtrieb, Sturm und Maroni am Markt. In den Weingärten des Burgenlands wird gelesen — Zeit für einen guten Tropfen und ein Glaserl beim Buschenschank.</p>
+            <ul class="timeline-tags">
+              <li class="chip chip--fill">Almabtrieb erleben</li>
+              <li class="chip chip--fill">Törggelen &amp; Sturm</li>
+              <li class="chip chip--fill">Nebelfreie Gipfel</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-panel" role="tabpanel" id="panel-wi" aria-labelledby="tab-wi">
+        <div class="feature feature--split">
+          <div class="feature-media ratio-wide ph reveal-img" data-theme="snow">
+            <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1100&q=80" alt="Verschneite Winterlandschaft mit Skipiste">
+          </div>
+          <div class="feature-body">
+            <p class="overline-num">Von Dezember bis Feber</p>
+            <h3>Pulverschnee &amp; Punsch</h3>
+            <p class="prose">Im Jänner liegt der beste Schnee. Ob Carven am Arlberg, Rodeln bei Fackelschein oder einfach Kaiserschmarrn in der Hütte — der Tiroler Winter ist ein Fest. Und am Abend wärmt ein Achterl Glühwein am Adventmarkt.</p>
+            <ul class="timeline-tags">
+              <li class="chip chip--fill">Skifahren am Arlberg</li>
+              <li class="chip chip--fill">Adventmärkte</li>
+              <li class="chip chip--fill">Rodeln bei Nacht</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: GRAND ROUTE ============ -->
+<section class="section section--dark">
+  <div class="container container--wide">
+    <div class="feature feature--split-wide">
+      <div class="feature-media ratio-portrait ph reveal-img" data-theme="alpenglow">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1000&q=80" alt="Serpentinenstraße durch das Hochgebirge">
+        <span class="feature-tag badge badge--outline">Große Alpen-Route</span>
+      </div>
+      <div class="feature-body">
+        <p class="eyebrow">Die Titelgeschichte</p>
+        <h2>Sieben Tage quer durch die Alpen</h2>
+        <p class="prose">Von der Großglockner-Hochalpenstraße bis zum Arlbergpass: unsere Redaktion hat die schönste Route quer durch Österreich zusammengestellt. Mit Übernachtungen in ausgesuchten Hotels, den besten Panoramapunkten und Wirtshäusern, wo noch selber gekocht wird.</p>
+        <p class="prose">Ein Roadtrip, der Sie durch fünf Bundesländer, über zwölf Pässe und mitten hinein in die österreichische Seele führt — <span class="serif-accent text-brass">gemütlich, versteht sich.</span></p>
+        <div class="stats mt-3" style="margin-bottom:2rem;">
+          <div class="stat"><div class="stat-num">7</div><div class="stat-label">Tage</div></div>
+          <div class="stat"><div class="stat-num">640</div><div class="stat-label">Kilometer</div></div>
+          <div class="stat"><div class="stat-num">12</div><div class="stat-label">Alpenpässe</div></div>
+        </div>
+        <a class="btn btn--primary" href="tirol.html">Zur Route <span class="arw">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE MAP ============ -->
+<section class="section">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Interaktive Landkarte</p>
+      <h2>Ganz Österreich auf einen Blick</h2>
+      <p>Klicken Sie sich durch unsere Lieblingsplätze — von der Bundeshauptstadt bis zum kleinsten Bergsee. Jeder Punkt führt Sie zu einer Geschichte.</p>
+    </div>
+    <div class="map-shell reveal">
+      <div class="map" data-map='{"center":[47.59,14.15],"zoom":7,"points":[
+        {"lat":48.2082,"lng":16.3738,"title":"Wien","kicker":"Kaiserstadt","type":"highlight","text":"Kaffeehaus, Kultur und der berühmte Wiener Schmäh.","open":true},
+        {"lat":47.8095,"lng":13.0550,"title":"Salzburg","kicker":"Mozartstadt","text":"Barockpracht, Festspiele und die Festung Hohensalzburg."},
+        {"lat":47.2692,"lng":11.4041,"title":"Innsbruck · Tirol","kicker":"Herz der Alpen","text":"Wo die Stadt direkt in die Berge übergeht."},
+        {"lat":47.5622,"lng":13.6493,"title":"Hallstatt","kicker":"Salzkammergut","text":"Das wohl meistfotografierte Dorf der Welt."},
+        {"lat":46.6247,"lng":14.3050,"title":"Wörthersee · Kärnten","kicker":"Der warme Süden","text":"Baden in Karibik-Türkis, mitten in den Alpen."},
+        {"lat":47.0707,"lng":15.4395,"title":"Graz","kicker":"Genusshauptstadt","text":"Steirisches Kürbiskernöl und die schönste Altstadt."}
+      ]}'></div>
+      <div class="map-legend">
+        <h4>Legende</h4>
+        <ul>
+          <li><span class="pin" style="background:#D98C74"></span> Titel-Destination</li>
+          <li><span class="pin" style="background:#B08A4F"></span> Redaktions-Tipp</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LATEST FROM MAGAZINE ============ -->
+<section class="section section--paper-2">
+  <div class="container container--wide">
+    <div class="section-head reveal" style="display:flex; justify-content:space-between; align-items:flex-end; max-width:none; gap:2rem; flex-wrap:wrap;">
+      <div>
+        <p class="eyebrow">Aus dem Magazin</p>
+        <h2>Frisch aus der Redaktion</h2>
+      </div>
+      <a class="link-more" href="magazin.html">Alle Beiträge <span class="arw">→</span></a>
+    </div>
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <a href="magazin.html" class="card-media ph zoom ratio-wide" data-theme="city">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?auto=format&fit=crop&w=900&q=80" alt="Wiener Kaffeehaus von innen">
+        </a>
+        <div class="card-body">
+          <div class="card-meta"><span>Lebensart</span><span class="dot"></span><span>6 Min</span></div>
+          <h3 class="card-title"><a href="magazin.html">Die hohe Kunst des Nichtstuns im Kaffeehaus</a></h3>
+          <p class="card-excerpt">Warum eine Melange in Wien länger dauern darf — und warum das gut so ist.</p>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <a href="magazin.html" class="card-media ph zoom ratio-wide" data-theme="pine">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=900&q=80" alt="Almhütte in den Bergen">
+        </a>
+        <div class="card-body">
+          <div class="card-meta"><span>Reise</span><span class="dot"></span><span>9 Min</span></div>
+          <h3 class="card-title"><a href="magazin.html">Zehn Almhütten, die den Umweg wert sind</a></h3>
+          <p class="card-excerpt">Von der einfachen Jausenstation bis zum Gourmet-Refugium auf 2.000 Metern.</p>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <a href="magazin.html" class="card-media ph zoom ratio-wide" data-theme="meadow">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=900&q=80" alt="Gedeckter Tisch mit österreichischen Spezialitäten">
+        </a>
+        <div class="card-body">
+          <div class="card-meta"><span>Kulinarik</span><span class="dot"></span><span>7 Min</span></div>
+          <h3 class="card-title"><a href="magazin.html">Auf der Suche nach dem besten Kaiserschmarrn</a></h3>
+          <p class="card-excerpt">Unsere Redaktion hat sich quergegessen — eine süße Pflichtübung.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOTEL GUIDE TEASER ============ -->
+<section class="section">
+  <div class="container container--wide">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Schlafen mit Stil</p>
+      <h2>Häuser mit Herz</h2>
+      <p>Handverlesen von unserer Redaktion: Hotels und Chalets, die mehr sind als ein Bett für die Nacht — sie sind das Reiseziel selbst.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="hotel reveal">
+        <div class="hotel-media ph" data-theme="snow">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Luxuriöses Chalet in verschneiter Berglandschaft">
+          <div class="stars" role="img" aria-label="5 Sterne">★★★★★</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Lech am Arlberg · Vorarlberg</span>
+          <h3 class="hotel-name">Chalet Arlberg</h3>
+          <p class="hotel-desc">Ski-in, Ski-out und ein Kachelofen, an dem man Wurzeln schlägt.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 420 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+      <article class="hotel reveal d1">
+        <div class="hotel-media ph" data-theme="lake">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=900&q=80" alt="Seehotel mit Blick auf einen Bergsee">
+          <div class="stars" role="img" aria-label="5 Sterne">★★★★★</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Wolfgangsee · Salzkammergut</span>
+          <h3 class="hotel-name">Seevilla am Wolfgangsee</h3>
+          <p class="hotel-desc">Privater Bootssteg, Frühstück mit Blick aufs stille Wasser.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 310 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+      <article class="hotel reveal d2">
+        <div class="hotel-media ph" data-theme="city">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=900&q=80" alt="Elegantes Stadthotel-Zimmer in Wien">
+          <div class="stars" role="img" aria-label="5 Sterne">★★★★★</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Innere Stadt · Wien</span>
+          <h3 class="hotel-name">Palais Ringstraße</h3>
+          <p class="hotel-desc">Kaiserliche Höhe, Parkettböden und die Oper vor der Tür.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 385 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+    </div>
+    <div class="text-center mt-3">
+      <a class="btn btn--ghost" href="kulinarik.html">Alle Hotelguides ansehen</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="section section--ink section--tight">
+  <div class="container container--wide">
+    <div class="stats">
+      <div class="stat reveal"><div class="stat-num">9</div><div class="stat-label">Bundesländer</div></div>
+      <div class="stat reveal d1"><div class="stat-num">3.798</div><div class="stat-label">Meter Großglockner</div></div>
+      <div class="stat reveal d2"><div class="stat-num">25.000</div><div class="stat-label">Km Wanderwege</div></div>
+      <div class="stat reveal d3"><div class="stat-num">1.100+</div><div class="stat-label">Badeseen</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY TEASER ============ -->
+<section class="section">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Bildstrecke</p>
+      <h2>Österreich in Bildern</h2>
+      <p>Ein Klick genügt — tauchen Sie ein in unsere Lieblingsaufnahmen aus allen Ecken des Landes.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="gallery-item big ph" data-theme="alpenglow" data-lightbox data-full="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1600&q=80" data-cap="Alpenglühen über den Gipfeln">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=800&q=80" alt="Alpenglühen über den Gipfeln">
+      </div>
+      <div class="gallery-item ph" data-theme="lake" data-lightbox data-full="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=1600&q=80" data-cap="Smaragdgrüner Bergsee">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=700&q=80" alt="Smaragdgrüner Bergsee">
+      </div>
+      <div class="gallery-item ph" data-theme="city" data-lightbox data-full="https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=1600&q=80" data-cap="Wiener Prachtbau">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1516550893923-42d28e5677af?auto=format&fit=crop&w=700&q=80" alt="Wiener Prachtbau">
+      </div>
+      <div class="gallery-item wide ph" data-theme="snow" data-lightbox data-full="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1600&q=80" data-cap="Winter am Arlberg">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1000&q=80" alt="Winter am Arlberg">
+      </div>
+      <div class="gallery-item ph" data-theme="meadow" data-lightbox data-full="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1600&q=80" data-cap="Almwiese im Sommer">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=700&q=80" alt="Almwiese im Sommer">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section section--dark newsletter newsletter--split">
+  <div class="container container--wide newsletter-inner">
+    <div class="reveal">
+      <p class="eyebrow">Die Post vom Berg</p>
+      <h2>Unser Newsletter</h2>
+      <p class="lead mt-1">Alle vierzehn Tage die schönsten Geschichten, Geheimtipps und Reiseideen — frisch in Ihr Postfach. Kostenlos, versteht sich.</p>
+    </div>
+    <form class="nl-form reveal d1" data-newsletter novalidate>
+      <div class="nl-row">
+        <input class="nl-input" type="email" name="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
+        <button class="btn btn--primary" type="submit">Abonnieren <span class="arw">→</span></button>
+      </div>
+      <p class="nl-note">✓ Kein Spam. Nur guade Sachen. Jederzeit kündbar.</p>
+      <div class="nl-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container container--wide">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="22" cy="10" r="3.4" fill="#CBAA6E"/>
+            <path d="M2 27 L12 11 L18 21 L21.5 15 L30 27 Z" fill="currentColor"/>
+            <path d="M12 11 L15.6 17 L13.2 20 L10 14.6 Z" fill="#B08A4F"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Alpenglühen</span><span class="brand-sub">Das Österreich-Magazin</span></span>
+        </a>
+        <p class="footer-tagline">Reise, Genuss und Lebensart aus dem Herzen der Alpen. Servus &amp; pfiat di.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="Pinterest">Pt</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Regionen</h4>
+        <ul>
+          <li><a href="wien.html">Wien</a></li>
+          <li><a href="salzburg.html">Salzburg</a></li>
+          <li><a href="tirol.html">Tirol</a></li>
+          <li><a href="seen.html">Die Seen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erleben</h4>
+        <ul>
+          <li><a href="wandern.html">Wandern</a></li>
+          <li><a href="skifahren.html">Skifahren</a></li>
+          <li><a href="kulinarik.html">Kulinarik &amp; Kultur</a></li>
+          <li><a href="magazin.html">Magazin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html">Newsletter</a></li>
+          <li><a href="kontakt.html">Mediadaten</a></li>
+          <li><a href="kontakt.html">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Alpenglühen Verlag · Wien. Alle Rechte vorbehalten.</span>
+      <div class="footer-bottom-links">
+        <a href="kontakt.html">Datenschutz</a>
+        <a href="kontakt.html">Impressum</a>
+        <a href="kontakt.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

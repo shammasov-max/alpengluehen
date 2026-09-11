@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Skifahren in Österreich — Pisten, Gletscher & Hüttenzauber | ALPENGLÜHEN</title>
+<meta name="description" content="Skifahren in Österreich: Pistenkilometer am Arlberg, in Sölden, Ischgl und Kitzbühel, Gletscherskilauf und Hüttengaudi — der große Winterguide von Alpenglühen.">
+<meta name="theme-color" content="#18231B">
+<link rel="canonical" href="https://www.alpengluehen.at/skifahren.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ALPENGLÜHEN">
+<meta property="og:locale" content="de_AT">
+<meta property="og:title" content="Skifahren in Österreich — Pisten, Gletscher & Hüttenzauber">
+<meta property="og:description" content="Pulverschnee am Arlberg, Gletscherskilauf in Sölden, Hüttengaudi in Kitzbühel — unser großer Winterguide durch Österreichs schönste Skigebiete.">
+<meta property="og:url" content="https://www.alpengluehen.at/skifahren.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skifahren in Österreich — Pisten, Gletscher & Hüttenzauber">
+<meta name="twitter:description" content="Pulverschnee am Arlberg, Gletscherskilauf in Sölden, Hüttengaudi in Kitzbühel — unser großer Winterguide.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "TouristDestination",
+      "@id": "https://www.alpengluehen.at/skifahren.html#destination",
+      "name": "Skifahren in Österreich",
+      "description": "Die schönsten Skigebiete Österreichs im Überblick: St. Anton am Arlberg, Sölden, Ischgl, Kitzbühel, Saalbach-Hinterglemm und Obergurgl-Hochgurgl — Pisten, Gletscher und Hüttenzauber.",
+      "url": "https://www.alpengluehen.at/skifahren.html",
+      "touristType": ["Skifahrer", "Snowboarder", "Familien", "Wintersportler"],
+      "includesAttraction": [
+        { "@type": "TouristAttraction", "name": "St. Anton am Arlberg" },
+        { "@type": "TouristAttraction", "name": "Sölden" },
+        { "@type": "TouristAttraction", "name": "Ischgl" },
+        { "@type": "TouristAttraction", "name": "Kitzbühel" },
+        { "@type": "TouristAttraction", "name": "Saalbach-Hinterglemm" },
+        { "@type": "TouristAttraction", "name": "Obergurgl-Hochgurgl" }
+      ],
+      "geo": { "@type": "GeoCoordinates", "latitude": 47.30, "longitude": 11.60 },
+      "image": "https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1200&q=80",
+      "inLanguage": "de-AT"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.alpengluehen.at/" },
+        { "@type": "ListItem", "position": 2, "name": "Skifahren", "item": "https://www.alpengluehen.at/skifahren.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container container--wide header-inner">
+    <a class="brand" href="index.html" aria-label="ALPENGLÜHEN — Startseite">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="22" cy="10" r="3.4" fill="#CBAA6E"/>
+        <path d="M2 27 L12 11 L18 21 L21.5 15 L30 27 Z" fill="currentColor"/>
+        <path d="M12 11 L15.6 17 L13.2 20 L10 14.6 Z" fill="#B08A4F"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Alpenglühen</span>
+        <span class="brand-sub">Das Österreich-Magazin</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="nav-link" href="wien.html">Wien</a>
+      <a class="nav-link" href="salzburg.html">Salzburg</a>
+      <a class="nav-link" href="tirol.html">Tirol</a>
+      <a class="nav-link" href="seen.html">Seen</a>
+      <a class="nav-link" href="wandern.html">Wandern</a>
+      <a class="nav-link" href="skifahren.html">Skifahren</a>
+      <a class="nav-link" href="kulinarik.html">Kulinarik</a>
+      <a class="nav-link" href="magazin.html">Magazin</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="kontakt.html">Kontakt</a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-brand">Alpenglühen</div>
+  <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+    <a href="index.html"><span class="idx">01</span> Startseite</a>
+    <a href="wien.html"><span class="idx">02</span> Wien</a>
+    <a href="salzburg.html"><span class="idx">03</span> Salzburg</a>
+    <a href="tirol.html"><span class="idx">04</span> Tirol</a>
+    <a href="seen.html"><span class="idx">05</span> Seen</a>
+    <a href="wandern.html"><span class="idx">06</span> Wandern</a>
+    <a href="skifahren.html"><span class="idx">07</span> Skifahren</a>
+    <a href="kulinarik.html"><span class="idx">08</span> Kulinarik</a>
+    <a href="magazin.html"><span class="idx">09</span> Magazin</a>
+    <a href="kontakt.html"><span class="idx">10</span> Kontakt</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <span>Servus &amp; herzlich willkommen</span>
+    <span>Wien · Salzburg · Tirol</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-label="Seitentitel">
+  <div class="hero-media ph" data-theme="snow">
+    <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1920&q=80" alt="Skifahrer zieht Schwünge durch den Pulverschnee vor blauem Himmel in den Tiroler Alpen" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container container--wide page-hero-content">
+    <nav class="breadcrumb" aria-label="Brotkrümel">
+      <a href="index.html">Startseite</a><span>/</span><span>Skifahren</span>
+    </nav>
+    <p class="eyebrow hero-kicker">Winter &amp; Pistenzauber</p>
+    <h1>Pulverschnee, so weit das Aug reicht</h1>
+    <p class="hero-sub">Von den Dreitausendern des Arlbergs bis zu den Sonnenhängen Kitzbühels: Heuer wird der Winter wieder zum großen Fest — Ski heil!</p>
+  </div>
+</section>
+
+<!-- ============ EDITORIAL INTRO ============ -->
+<section class="section section--tight">
+  <div class="container container--narrow">
+    <p class="eyebrow eyebrow--center eyebrow--plain reveal text-center">Grüß Gott, Schihaserl</p>
+    <p class="lead reveal d1 mt-2 text-center">Es gibt einen Moment im Jänner, da liegt der Schnee so trocken und griffig, dass jede Kurve wie von selbst gelingt. <span class="serif-accent text-brass">Das ist Österreichs Winter.</span></p>
+    <div class="prose reveal d2 mt-3">
+      <p class="dropcap">Wer heuer zum ersten Mal in Tirol oder Vorarlberg die Bindung schließt, versteht rasch, warum man von der Hüttengaudi hierzulande nicht bloß spricht, sondern sie lebt. Der beste Schnee liegt erfahrungsgemäß im Jänner: kalt genug für griffigen Pulverschnee, aber schon mit Sonnenstunden, die auf der Terrasse gut tun. Wer das erste Mal richtig carvt — die Kante sauber im Schnee, der Oberkörper talwärts, kein Rutschen, nur Führen — der versteht, warum Österreichs Skigebiete seit über hundert Jahren Süchtige produzieren.</p>
+      <p>Unsere Redaktion ist heuer wieder quer durchs Land gefahren: von den Steilhängen des Arlbergs über die Gletscherpisten des Ötztals bis zu den Sonnenterrassen der Kitzbüheler Alpen. Was folgt, ist unser großer Winterguide — mit Pistenkilometern, Hüttentipps und den Terminen, die Sie sich heuer im Kalender rot anstreichen sollten.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKI RESORT GUIDE ============ -->
+<section class="section section--paper-2" id="skigebiete">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Die Skigebiete</p>
+      <h2>Sechs Bühnen für den Winter</h2>
+      <p>Von den Dreitausendern des Ötztals bis zu den Sonnenhängen der Kitzbüheler Alpen — unsere Redaktion hat die schönsten Skigebiete des Landes für Sie zusammengestellt.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="St. Anton am Arlberg entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=80" alt="Tiefverschneite Piste in St. Anton am Arlberg">
+          <span class="badge badge--brass">Arlberg</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Tirol · Arlberg</p>
+          <h3 class="card-title"><a href="tirol.html">St. Anton am Arlberg</a></h3>
+          <p class="card-excerpt">Der legendäre Skizirkus für Könner: steile Flanken, tiefer Firn und die schönste Talabfahrt der Alpen.</p>
+          <ul class="timeline-tags mt-1">
+            <li class="chip chip--fill">305 km Pisten</li>
+            <li class="chip chip--fill">88 Lifte</li>
+            <li class="chip chip--fill">1.304–2.811 m</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Sölden entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Gletscherpanorama oberhalb von Sölden im Ötztal">
+          <span class="badge badge--brass">Ötztal</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Tirol · Ötztal</p>
+          <h3 class="card-title"><a href="tirol.html">Sölden</a></h3>
+          <p class="card-excerpt">Weltcup-Bühne, Gletscherskilauf bis in den Sommer und Nächte, die man erst im Morgengrauen beendet.</p>
+          <ul class="timeline-tags mt-1">
+            <li class="chip chip--fill">144 km Pisten</li>
+            <li class="chip chip--fill">31 Lifte</li>
+            <li class="chip chip--fill">1.350–3.340 m</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Ischgl entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=900&q=80" alt="Weite Piste im Skigebiet Ischgl im Paznauntal">
+          <span class="badge badge--brass">Paznaun</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Tirol · Paznaun</p>
+          <h3 class="card-title"><a href="tirol.html">Ischgl</a></h3>
+          <p class="card-excerpt">Grenzenloses Fahrvergnügen bis nach Samnaun — und Konzerte auf der Piste, von denen man noch lange erzählt.</p>
+          <ul class="timeline-tags mt-1">
+            <li class="chip chip--fill">239 km Pisten</li>
+            <li class="chip chip--fill">45 Lifte</li>
+            <li class="chip chip--fill">1.377–2.872 m</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card reveal d3">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Kitzbühel entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=80" alt="Sonnige Piste oberhalb von Kitzbühel">
+          <span class="badge badge--brass">Kitzbüheler Alpen</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Tirol · Kitzbüheler Alpen</p>
+          <h3 class="card-title"><a href="tirol.html">Kitzbühel</a></h3>
+          <p class="card-excerpt">Die Streif im Blick, Sonnenterrassen im Rücken — hier trifft Skigeschichte auf Champagner-Laune.</p>
+          <ul class="timeline-tags mt-1">
+            <li class="chip chip--fill">179 km Pisten</li>
+            <li class="chip chip--fill">54 Lifte</li>
+            <li class="chip chip--fill">800–2.000 m</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card reveal d4">
+        <a href="salzburg.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Saalbach-Hinterglemm entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Pistenpanorama im Skicircus Saalbach-Hinterglemm">
+          <span class="badge badge--brass">Skicircus</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Salzburg · Glemmtal</p>
+          <h3 class="card-title"><a href="salzburg.html">Saalbach-Hinterglemm</a></h3>
+          <p class="card-excerpt">Der gesellige Skicircus im Glemmtal: breite Autobahnpisten und Hüttengaudi bis zum letzten Lift.</p>
+          <ul class="timeline-tags mt-1">
+            <li class="chip chip--fill">270 km Pisten</li>
+            <li class="chip chip--fill">70 Lifte</li>
+            <li class="chip chip--fill">840–2.096 m</li>
+          </ul>
+        </div>
+      </article>
+      <article class="card reveal d5">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Obergurgl-Hochgurgl entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=900&q=80" alt="Hochalpine Piste oberhalb von Obergurgl im Ötztal">
+          <span class="badge badge--brass">Ötztal</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Tirol · Ötztal</p>
+          <h3 class="card-title"><a href="tirol.html">Obergurgl-Hochgurgl</a></h3>
+          <p class="card-excerpt">Österreichs höchstgelegene Pfarre — garantiert schneesicher, wunderbar überschaubar und still.</p>
+          <ul class="timeline-tags mt-1">
+            <li class="chip chip--fill">112 km Pisten</li>
+            <li class="chip chip--fill">24 Lifte</li>
+            <li class="chip chip--fill">1.930–3.082 m</li>
+          </ul>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE MAP ============ -->
+<section class="section" id="karte">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Interaktive Landkarte</p>
+      <h2>Der Winter auf einen Blick</h2>
+      <p>Sechs Skigebiete, ein Bergpanorama. Klicken Sie sich durch unsere Winter-Favoriten quer durch Tirol und Salzburg.</p>
+    </div>
+    <div class="map-shell reveal">
+      <div class="map" data-map='{"center":[47.30,11.60],"zoom":7,"points":[
+        {"lat":47.1288,"lng":10.2639,"title":"St. Anton am Arlberg","kicker":"Arlberg","type":"highlight","text":"305 Pistenkilometer und der legendäre Run of Fame.","open":true},
+        {"lat":46.9702,"lng":10.9906,"title":"Sölden","kicker":"Ötztal","text":"Gletscherskilauf und Schauplatz des Weltcup-Openings."},
+        {"lat":47.0102,"lng":10.2924,"title":"Ischgl","kicker":"Paznaun","text":"Grenzenloses Skivergnügen bis hinüber nach Samnaun."},
+        {"lat":47.4474,"lng":12.3921,"title":"Kitzbühel","kicker":"Kitzbüheler Alpen","text":"Die Streif, das Gamsstadt-Flair und feine Sonnenterrassen."},
+        {"lat":47.3903,"lng":12.6389,"title":"Saalbach-Hinterglemm","kicker":"Salzburg","text":"Geselliger Skicircus mit breiten Pisten und Hüttengaudi."},
+        {"lat":46.8694,"lng":11.0264,"title":"Obergurgl-Hochgurgl","kicker":"Ötztal","text":"Österreichs höchstgelegene Pfarre, schneesicher von November bis Mai."}
+      ]}'></div>
+      <div class="map-legend">
+        <h4>Legende</h4>
+        <ul>
+          <li><span class="pin" style="background:#D98C74"></span> Arlberg im Fokus</li>
+          <li><span class="pin" style="background:#B08A4F"></span> Weitere Skigebiete</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="section section--ink section--tight">
+  <div class="container container--wide">
+    <div class="stats">
+      <div class="stat reveal"><div class="stat-num">3</div><div class="stat-label">Gletscher ganzjährig</div></div>
+      <div class="stat reveal d1"><div class="stat-num">254</div><div class="stat-label">Skigebiete im Land</div></div>
+      <div class="stat reveal d2"><div class="stat-num">23.000</div><div class="stat-label">Pistenkilometer</div></div>
+      <div class="stat reveal d3"><div class="stat-num">120+</div><div class="stat-label">Jahre Skitradition</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKI-SAFARI ITINERARY ============ -->
+<section class="section" id="skisafari">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Die Ski-Safari</p>
+      <h2>Der Arlberg Run of Fame</h2>
+      <p>Vier Tage, ein Skigebiet, unzählige goldene Tafeln mit den Namen großer Skifahrer: Wir folgen dem legendären Run of Fame von St. Anton bis nach Zürs und wieder zurück.</p>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item reveal">
+        <div class="day-num"><span class="lbl">Tag</span><span class="n">1</span></div>
+        <div class="timeline-body">
+          <h3>St. Anton → St. Christoph</h3>
+          <p>Auftakt auf der Originalabfahrt der ersten alpinen Ski-WM von 1948 — vorbei am Gasthof Alte Post, mit dem Sessellift hinauf zum Kapall und wieder hinunter, bis die Oberschenkel brennen.</p>
+          <div class="timeline-tags"><span class="chip">18 km Piste</span><span class="chip">1.020 Hm</span><span class="chip">Einkehr: Sennhütte</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal d1">
+        <div class="day-num"><span class="lbl">Tag</span><span class="n">2</span></div>
+        <div class="timeline-body">
+          <h3>St. Christoph → Stuben</h3>
+          <p>Über den Albonagrat hinüber ins beschauliche Stuben, wo der Skisport erfunden wurde, sagt man. Die Ulmer Hütte serviert dort oben wohl den besten Kaiserschmarrn am Berg.</p>
+          <div class="timeline-tags"><span class="chip">14 km Piste</span><span class="chip">860 Hm</span><span class="chip">Einkehr: Ulmer Hütte</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal d2">
+        <div class="day-num"><span class="lbl">Tag</span><span class="n">3</span></div>
+        <div class="timeline-body">
+          <h3>Stuben → Zürs</h3>
+          <p>Mit der Flexenbahn hinüber nach Zürs, vorbei an den schneesichersten Hängen des Arlbergs. Wer abseits der Piste Tiefschnee sucht, findet ihn hier garantiert bis ins Frühjahr.</p>
+          <div class="timeline-tags"><span class="chip">16 km Piste</span><span class="chip">1.140 Hm</span><span class="chip">Einkehr: Flexenhäusl</span></div>
+        </div>
+      </div>
+      <div class="timeline-item reveal d3">
+        <div class="day-num"><span class="lbl">Tag</span><span class="n">4</span></div>
+        <div class="timeline-body">
+          <h3>Zürs → Lech → zurück nach St. Anton</h3>
+          <p>Der große Schlusstag: über Lech und den Rüfikopf zurück zum Ausgangspunkt. Am Ziel wartet ein Achterl auf der Sonnenterrasse — und die Gewissheit, heuer wiederzukommen.</p>
+          <div class="timeline-tags"><span class="chip">17 km Piste</span><span class="chip">980 Hm</span><span class="chip">Einkehr: Rüfikopf</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: GLETSCHER & SCHNEESICHERHEIT ============ -->
+<section class="section section--dark">
+  <div class="container container--wide">
+    <div class="feature feature--split">
+      <div class="feature-media ratio-wide ph reveal-img" data-theme="snow">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1100&q=80" alt="Firnschnee auf einem österreichischen Gletscher im Frühjahrslicht">
+        <span class="feature-tag badge badge--outline">Gletscherskilauf</span>
+      </div>
+      <div class="feature-body">
+        <p class="eyebrow">Schneesicherheit</p>
+        <h2>Skifahren von Oktober bis Mai</h2>
+        <p class="prose">Der Hintertuxer Gletscher ist der einzige Skiberg Österreichs, der 365 Tage im Jahr geöffnet hat — Weihnachten inklusive. Am Stubaier Gletscher, Tirols höchstgelegenem Skigebiet, liegt der Schnee bis weit in den Mai, während in Sölden am Rettenbach- und Tiefenbachferner alljährlich der Ski-Weltcup die Saison eröffnet.</p>
+        <p class="prose">Wer im Frühjahr kommt, wird mit griffigem Firn und Sonnenstunden am Gipfelkreuz belohnt — Carven auf 3.000 Metern, während im Tal schon die Marillenbäume knospen.</p>
+        <a class="btn btn--primary" href="tirol.html">Mehr über Tirols Gletscher <span class="arw">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURE: APRÈS-SKI & HÜTTENGAUDI ============ -->
+<section class="section section--paper-2">
+  <div class="container container--wide">
+    <div class="feature feature--split reverse">
+      <div class="feature-media ratio-wide ph reveal-img" data-theme="dusk">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1100&q=80" alt="Sonnenterrasse einer Skihütte im Abendlicht">
+        <span class="feature-tag badge badge--outline">Après-Ski</span>
+      </div>
+      <div class="feature-body">
+        <p class="eyebrow">Nach der Piste</p>
+        <h2>Hüttengaudi und Sonnenterrasse</h2>
+        <p class="prose">Um drei Uhr nachmittags kippt die Stimmung auf der Sonnenterrasse: Schihaserl und Trachtenjanker tanzen auf den Bänken, die Musik wird lauter, und irgendwer bestellt die erste Runde Jagatee. Zwischen Skischuh-Stampfen und Schunkeln bleibt noch Zeit für einen dampfenden Germknödel mit Mohn.</p>
+        <p class="prose">Ob am Arlberg, in Ischgl oder auf einer Alm über Kitzbühel — die Hüttengaudi gehört zum österreichischen Winter wie der Pulverschnee selbst. Gemütlich wird es dort erst so richtig, wenn die letzte Gondel längst zu Tal gefahren ist.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SKI-CHALETS & HOTELS ============ -->
+<section class="section">
+  <div class="container container--wide">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Schlafen nach der Piste</p>
+      <h2>Quartiere mit Kaminfeuer</h2>
+      <p>Drei Häuser, handverlesen von unserer Redaktion — vom Ski-in-Ski-out-Chalet bis zur Boutique mitten im Gamsstadt-Trubel.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="hotel reveal">
+        <div class="hotel-media ph" data-theme="snow">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=80" alt="Ski-in-Ski-out-Chalet am Arlberg im Schnee">
+          <div class="stars" role="img" aria-label="5 Sterne">★★★★★</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">St. Anton am Arlberg · Tirol</span>
+          <h3 class="hotel-name">Chalet Weißblau</h3>
+          <p class="hotel-desc">Ski-in, Ski-out direkt an der Rendlbahn, Kachelofen und Sauna mit Blick auf den Piz Buin.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 480 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+      <article class="hotel reveal d1">
+        <div class="hotel-media ph" data-theme="pine">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Wellness-Resort mit Bergblick im Glemmtal">
+          <div class="stars" role="img" aria-label="5 Sterne">★★★★★</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Saalbach-Hinterglemm · Salzburg</span>
+          <h3 class="hotel-name">Bergquell Spa Resort</h3>
+          <p class="hotel-desc">Almkräuter-Massagen, Rooftop-Pool mit Pistenblick und ein Frühstücksbuffet, das den Vormittag rettet.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 260 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+      <article class="hotel reveal d2">
+        <div class="hotel-media ph" data-theme="alpenglow">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="Boutiquehotel in der Kitzbüheler Altstadt am Abend">
+          <div class="stars" role="img" aria-label="4 Sterne">★★★★</div>
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Kitzbühel · Tirol</span>
+          <h3 class="hotel-name">Boutique Gamsstadt</h3>
+          <p class="hotel-desc">Mitten in der Vorderstadt, fünf Gehminuten zur Hahnenkammbahn, abends Kaminlounge mit Glühwein.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 340 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EVENT CALENDAR ============ -->
+<section class="section section--paper-2" id="termine">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Termine am Berg</p>
+      <h2>Der Winter im Kalender</h2>
+      <p>Von der Weltcup-Eröffnung bis zum Saisonfinale — diese Termine sollten Schihaserl und Pistenprofis heuer im Kalender stehen haben.</p>
+    </div>
+    <div class="events">
+      <div class="event reveal">
+        <div class="event-date"><span class="d">25</span><span class="m">Okt</span></div>
+        <div class="event-info"><h4>Weltcup-Opening Sölden</h4><p>Der Rettenbachferner eröffnet traditionell die alpine Skiweltcup-Saison.</p></div>
+        <div class="event-loc">Sölden · Tirol</div>
+      </div>
+      <div class="event reveal d1">
+        <div class="event-date"><span class="d">06</span><span class="m">Dez</span></div>
+        <div class="event-info"><h4>Snow-Opening in den Gletscherregionen</h4><p>Erste Schwünge, Punsch und Livemusik zum Saisonstart auf den Bergstationen.</p></div>
+        <div class="event-loc">Tirol &amp; Salzburg</div>
+      </div>
+      <div class="event reveal d2">
+        <div class="event-date"><span class="d">22</span><span class="m">Jän</span></div>
+        <div class="event-info"><h4>Hahnenkamm-Rennen</h4><p>Die Streif ruft: das schnellste und gefürchtetste Abfahrtsrennen der Welt.</p></div>
+        <div class="event-loc">Kitzbühel · Tirol</div>
+      </div>
+      <div class="event reveal d3">
+        <div class="event-date"><span class="d">07</span><span class="m">Feb</span></div>
+        <div class="event-info"><h4>Air &amp; Style</h4><p>Snowboard- und Freeski-Contest mit internationaler Szene und Konzertbühne.</p></div>
+        <div class="event-loc">Innsbruck · Tirol</div>
+      </div>
+      <div class="event reveal d4">
+        <div class="event-date"><span class="d">11</span><span class="m">Apr</span></div>
+        <div class="event-info"><h4>Weißer Rausch</h4><p>Das legendäre Skirennen zum Saisonfinale — Kult seit Jahrzehnten, Gänsehaut inklusive.</p></div>
+        <div class="event-loc">St. Anton am Arlberg</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PHOTOGRAPHY GALLERY ============ -->
+<section class="section" id="galerie">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Bildstrecke</p>
+      <h2>Der Winter in Bildern</h2>
+      <p>Ein Klick genügt — von der ersten Spur im Pulverschnee bis zur letzten Gondel am Abend.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="gallery-item big ph" data-theme="snow" data-lightbox data-full="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=1600&q=80" data-cap="Erste Spur im Tiefschnee">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=800&q=80" alt="Erste Spur im Tiefschnee am Arlberg">
+      </div>
+      <div class="gallery-item ph" data-theme="snow" data-lightbox data-full="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=1600&q=80" data-cap="Gondel im Morgenlicht">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=700&q=80" alt="Gondelbahn im Morgenlicht über den Pisten">
+      </div>
+      <div class="gallery-item tall ph" data-theme="alpenglow" data-lightbox data-full="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=1600&q=80" data-cap="Gipfelkreuz im Alpenglühen">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=700&q=80" alt="Gipfelkreuz im Alpenglühen über dem Skigebiet">
+      </div>
+      <div class="gallery-item wide ph" data-theme="snow" data-lightbox data-full="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1600&q=80" data-cap="Sonnenterrasse nach der Piste">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1000&q=80" alt="Sonnenterrasse mit Skifahrern nach der Piste">
+      </div>
+      <div class="gallery-item ph" data-theme="pine" data-lightbox data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80" data-cap="Verschneite Almhütte">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=700&q=80" alt="Verschneite Almhütte im Winterwald">
+      </div>
+      <div class="gallery-item ph" data-theme="alpenglow" data-lightbox data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80" data-cap="Alpenglühen über dem Gletscher">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=700&q=80" alt="Alpenglühen über einem Tiroler Gletscher">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section section--dark newsletter newsletter--split">
+  <div class="container container--wide newsletter-inner">
+    <div class="reveal">
+      <p class="eyebrow">Die Post vom Berg</p>
+      <h2>Unser Newsletter</h2>
+      <p class="lead mt-1">Alle vierzehn Tage die schönsten Pistentipps, Hüttengeheimnisse und Schneeberichte — frisch in Ihr Postfach.</p>
+    </div>
+    <form class="nl-form reveal d1" data-newsletter novalidate>
+      <div class="nl-row">
+        <input class="nl-input" type="email" name="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
+        <button class="btn btn--primary" type="submit">Abonnieren <span class="arw">→</span></button>
+      </div>
+      <p class="nl-note">✓ Kein Spam. Nur guade Sachen. Jederzeit kündbar.</p>
+      <div class="nl-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container container--wide">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="22" cy="10" r="3.4" fill="#CBAA6E"/>
+            <path d="M2 27 L12 11 L18 21 L21.5 15 L30 27 Z" fill="currentColor"/>
+            <path d="M12 11 L15.6 17 L13.2 20 L10 14.6 Z" fill="#B08A4F"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Alpenglühen</span><span class="brand-sub">Das Österreich-Magazin</span></span>
+        </a>
+        <p class="footer-tagline">Reise, Genuss und Lebensart aus dem Herzen der Alpen. Servus &amp; pfiat di.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">Ig</a>
+          <a href="#" aria-label="Facebook">Fb</a>
+          <a href="#" aria-label="Pinterest">Pt</a>
+          <a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Regionen</h4>
+        <ul>
+          <li><a href="wien.html">Wien</a></li>
+          <li><a href="salzburg.html">Salzburg</a></li>
+          <li><a href="tirol.html">Tirol</a></li>
+          <li><a href="seen.html">Die Seen</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Erleben</h4>
+        <ul>
+          <li><a href="wandern.html">Wandern</a></li>
+          <li><a href="skifahren.html">Skifahren</a></li>
+          <li><a href="kulinarik.html">Kulinarik &amp; Kultur</a></li>
+          <li><a href="magazin.html">Magazin</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Service</h4>
+        <ul>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="kontakt.html">Newsletter</a></li>
+          <li><a href="kontakt.html">Mediadaten</a></li>
+          <li><a href="kontakt.html">Impressum</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Alpenglühen Verlag · Wien. Alle Rechte vorbehalten.</span>
+      <div class="footer-bottom-links">
+        <a href="kontakt.html">Datenschutz</a>
+        <a href="kontakt.html">Impressum</a>
+        <a href="kontakt.html">AGB</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

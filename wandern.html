@@ -1,0 +1,558 @@
+<!doctype html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wandern in Österreich — Weitwanderwege, Hütten &amp; Etappentouren | ALPENGLÜHEN</title>
+<meta name="description" content="Wandern in Österreich: der Adlerweg in vier Etappen, sechs Weitwanderwege von Tirol bis zum Schneeberg, urige Almhütten und Tipps für sichere Bergtouren.">
+<meta name="theme-color" content="#18231B">
+<link rel="canonical" href="https://www.alpengluehen.at/wandern.html">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+<!-- Open Graph / Social -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="ALPENGLÜHEN">
+<meta property="og:locale" content="de_AT">
+<meta property="og:title" content="Wandern in Österreich | ALPENGLÜHEN">
+<meta property="og:description" content="Der Adlerweg in vier Etappen, sechs Weitwanderwege von Tirol bis zum Schneeberg, urige Almhütten und Tipps für sichere Bergtouren.">
+<meta property="og:url" content="https://www.alpengluehen.at/wandern.html">
+<meta property="og:image" content="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=1200&q=80">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wandern in Österreich | ALPENGLÜHEN">
+<meta name="twitter:description" content="Der Adlerweg in vier Etappen, sechs Weitwanderwege und urige Almhütten — alles fürs Wandern in Österreich.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<link rel="stylesheet" href="assets/css/main.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://www.alpengluehen.at/wandern.html#article",
+      "headline": "Der Berg ruft — Wandern und Weitwandern in Österreich",
+      "description": "Der Adlerweg in vier Etappen, sechs große Weitwanderwege von Tirol bis zum Schneeberg, urige Almhütten und Tipps für sichere Bergtouren.",
+      "inLanguage": "de-AT",
+      "about": "Wandern und Weitwandern in Österreich",
+      "author": { "@type": "Organization", "name": "ALPENGLÜHEN Verlag" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "ALPENGLÜHEN Verlag",
+        "logo": { "@type": "ImageObject", "url": "https://www.alpengluehen.at/assets/img/favicon.svg" }
+      },
+      "image": "https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=1200&q=80",
+      "mainEntityOfPage": "https://www.alpengluehen.at/wandern.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://www.alpengluehen.at/" },
+        { "@type": "ListItem", "position": 2, "name": "Wandern", "item": "https://www.alpengluehen.at/wandern.html" }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main">Zum Inhalt springen</a>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="siteHeader">
+  <div class="container container--wide header-inner">
+    <a class="brand" href="index.html" aria-label="ALPENGLÜHEN — Startseite">
+      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+        <circle cx="22" cy="10" r="3.4" fill="#CBAA6E"/>
+        <path d="M2 27 L12 11 L18 21 L21.5 15 L30 27 Z" fill="currentColor"/>
+        <path d="M12 11 L15.6 17 L13.2 20 L10 14.6 Z" fill="#B08A4F"/>
+      </svg>
+      <span class="brand-text">
+        <span class="brand-name">Alpenglühen</span>
+        <span class="brand-sub">Das Österreich-Magazin</span>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="nav-link" href="wien.html">Wien</a>
+      <a class="nav-link" href="salzburg.html">Salzburg</a>
+      <a class="nav-link" href="tirol.html">Tirol</a>
+      <a class="nav-link" href="seen.html">Seen</a>
+      <a class="nav-link" href="wandern.html">Wandern</a>
+      <a class="nav-link" href="skifahren.html">Skifahren</a>
+      <a class="nav-link" href="kulinarik.html">Kulinarik</a>
+      <a class="nav-link" href="magazin.html">Magazin</a>
+    </nav>
+    <div class="header-actions">
+      <a class="header-cta" href="kontakt.html">Kontakt</a>
+      <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- ============ MOBILE MENU ============ -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-brand">Alpenglühen</div>
+  <nav class="mobile-menu-nav" aria-label="Mobile Navigation">
+    <a href="index.html"><span class="idx">01</span> Startseite</a>
+    <a href="wien.html"><span class="idx">02</span> Wien</a>
+    <a href="salzburg.html"><span class="idx">03</span> Salzburg</a>
+    <a href="tirol.html"><span class="idx">04</span> Tirol</a>
+    <a href="seen.html"><span class="idx">05</span> Seen</a>
+    <a href="wandern.html"><span class="idx">06</span> Wandern</a>
+    <a href="skifahren.html"><span class="idx">07</span> Skifahren</a>
+    <a href="kulinarik.html"><span class="idx">08</span> Kulinarik</a>
+    <a href="magazin.html"><span class="idx">09</span> Magazin</a>
+    <a href="kontakt.html"><span class="idx">10</span> Kontakt</a>
+  </nav>
+  <div class="mobile-menu-foot">
+    <span>Servus &amp; herzlich willkommen</span>
+    <span>Wien · Salzburg · Tirol</span>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero" aria-label="Seitentitel">
+  <div class="hero-media ph" data-theme="meadow">
+    <img class="ph-img" src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=1920&q=80" alt="Wanderweg durch blühende Almwiese vor Tiroler Bergpanorama" fetchpriority="high">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="container container--wide page-hero-content">
+    <nav class="breadcrumb" aria-label="Brotkrümel">
+      <a href="index.html">Startseite</a><span>/</span><span>Wandern</span>
+    </nav>
+    <p class="eyebrow hero-kicker">Berg &amp; Weitwandern</p>
+    <h1>Der Berg ruft</h1>
+    <p class="hero-sub">Von der ersten Alm bis zum Gipfelkreuz: Österreichs Steige führen durch stille Wälder, über Almwiesen und hinein in eine Stille, die man sich Schritt für Schritt verdient.</p>
+  </div>
+</section>
+
+<!-- ============ EDITORIAL INTRO ============ -->
+<section class="section section--tight" id="einleitung">
+  <div class="container container--narrow">
+    <p class="eyebrow reveal">Gehen, ganz einfach</p>
+    <h2 class="reveal d1 mt-1">Der langsamste Weg ist oft der schönste</h2>
+    <div class="prose mt-3 reveal d2">
+      <p class="dropcap">Wer den Berg wirklich kennenlernen will, muss ihn erwandern. Kein Sessellift, kein Auto, kein Bildschirm kann ersetzen, was ein Steig durch den Nadelwald mit einem macht: der Atem wird ruhiger, der Schritt findet seinen eigenen Takt, und irgendwo zwischen der letzten Kehre und der Baumgrenze verliert man die Uhr aus den Augen. Gehen ist die älteste Art, ein Land zu verstehen — und in Österreich hat sie eine lange Tradition.</p>
+      <p>Schon die ersten Sonnenstrahlen bringen den Duft von feuchtem Moos und Latschen aus dem Wald, weiter oben riecht die Luft nach Kräutern und kühlem Fels. Kuhglocken läuten aus dem Nebel, eine Gams steht für einen Wimpernschlag reglos am Grat. Und irgendwann, nach drei, vier Stunden, taucht sie auf: die Almhütte mit dem rauchenden Kamin, dem Holztisch in der Sonne und einer Brettljause, auf die man sich den ganzen Anstieg über gefreut hat.</p>
+      <p>Der Einkehrschwung gehört zum Wandern wie das Gipfelkreuz zum Gipfel: ein Glaserl Buttermilch, ein Kaiserschmarrn, ein Ratsch mit der Wirtin — und der Weg zurück ins Tal fühlt sich gleich um einiges leichter an.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS BAND ============ -->
+<section class="section section--ink section--tight" id="zahlen">
+  <div class="container container--wide">
+    <p class="eyebrow eyebrow--center reveal mb-2">Wandern in Zahlen</p>
+    <div class="stats">
+      <div class="stat reveal"><div class="stat-num">24</div><div class="stat-label">Etappen am Adlerweg</div></div>
+      <div class="stat reveal d1"><div class="stat-num">1.000+</div><div class="stat-label">Bewirtschaftete Hütten</div></div>
+      <div class="stat reveal d2"><div class="stat-num">6</div><div class="stat-label">Nationalparks</div></div>
+      <div class="stat reveal d3"><div class="stat-num">300+</div><div class="stat-label">Dreitausender</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED HÜTTENTOUR: ADLERWEG ============ -->
+<section class="section section--paper-2" id="adlerweg">
+  <div class="container container--wide">
+    <div class="feature feature--split-wide reveal">
+      <div class="feature-media ratio-portrait ph reveal-img" data-theme="alpenglow">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=1000&q=80" alt="Wanderer auf einem Grat im Alpenglühen des Adlerwegs">
+        <span class="feature-tag badge badge--outline">Vier-Etappen-Tour</span>
+      </div>
+      <div class="feature-body">
+        <p class="eyebrow">Die Hüttentour der Redaktion</p>
+        <h2>Der Adlerweg — vier Etappen durch Tirol</h2>
+        <p class="prose">Der große Adlerweg verbindet in Wahrheit 24 Etappen quer durch Tirol, von Kufstein bis an die Grenze zu Vorarlberg. Für ein verlängertes Wochenende haben wir die schönsten vier herausgesucht — von der sonnigen Almwiese bis zum hochalpinen Grat, mit Nächtigung in vier grundverschiedenen Hütten.</p>
+        <p class="prose">Festes Schuhwerk, etwas Kondition und Freude an der Höhe genügen. Der Rest erledigt der Weg von selbst.</p>
+      </div>
+    </div>
+
+    <div class="timeline mt-3">
+      <div class="timeline-item reveal">
+        <div class="day-num"><span class="lbl">Etappe</span><span class="n">1</span></div>
+        <div class="timeline-body">
+          <h3>Wilder Kaiser: Von St. Johann zur Gruttenhütte</h3>
+          <p>Der Adlerweg beginnt sanft: durch Bergmischwald und vorbei an blühenden Bergwiesen steigt der Steig zur Gruttenhütte auf. Der Wilde Kaiser zeigt hier seine schroffste Seite — senkrechte Wände, die schon Generationen von Kletterern angezogen haben.</p>
+          <div class="timeline-tags">
+            <span class="chip chip--fill">Gehzeit 4 Std. 30 Min</span>
+            <span class="chip chip--fill">↑ 900 Hm / ↓ 150 Hm</span>
+            <span class="chip chip--fill">Mittel</span>
+            <span class="chip chip--fill">Hütte: Gruttenhütte (1.620 m)</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal d1">
+        <div class="day-num"><span class="lbl">Etappe</span><span class="n">2</span></div>
+        <div class="timeline-body">
+          <h3>Karwendel-Querung zur Lamsenjochhütte</h3>
+          <p>Über saftige Almflächen unterhalb des Sonnjochs führt die zweite Etappe ins Karwendel, Tirols größten Naturpark. Gämsen stehen oft nur wenige Meter neben dem Steig, und die Lamsenjochhütte ist für ihre Kaspressknödel berühmt.</p>
+          <div class="timeline-tags">
+            <span class="chip chip--fill">Gehzeit 5 Std.</span>
+            <span class="chip chip--fill">↑ 750 Hm / ↓ 680 Hm</span>
+            <span class="chip chip--fill">Mittel</span>
+            <span class="chip chip--fill">Hütte: Lamsenjochhütte (1.953 m)</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal d2">
+        <div class="day-num"><span class="lbl">Etappe</span><span class="n">3</span></div>
+        <div class="timeline-body">
+          <h3>Stubaier Höhenweg zur Franz-Senn-Hütte</h3>
+          <p>Jetzt wird's alpin: über Geröllfelder und am Rand der Gletscherwelt der Stubaier Alpen entlang erreicht man die Franz-Senn-Hütte. Festes Schuhwerk und Trittsicherheit sind hier Pflicht, die Aussicht auf die Dreitausender die Belohnung.</p>
+          <div class="timeline-tags">
+            <span class="chip chip--fill">Gehzeit 5 Std. 30 Min</span>
+            <span class="chip chip--fill">↑ 1.100 Hm / ↓ 300 Hm</span>
+            <span class="chip chip--fill">Schwer</span>
+            <span class="chip chip--fill">Hütte: Franz-Senn-Hütte (2.147 m)</span>
+          </div>
+        </div>
+      </div>
+      <div class="timeline-item reveal d3">
+        <div class="day-num"><span class="lbl">Etappe</span><span class="n">4</span></div>
+        <div class="timeline-body">
+          <h3>Über den Alpenhauptkamm ins Lechtal</h3>
+          <p>Die letzte Etappe führt über den Alpenhauptkamm hinunter ins Lechtal, vorbei an der Ansbacher Hütte und durch duftende Latschenfelder. In Steeg wartet zum Abschluss ein Marend-Teller — und die Gewissheit, dass man sich den Kaiserschmarrn redlich verdient hat.</p>
+          <div class="timeline-tags">
+            <span class="chip chip--fill">Gehzeit 4 Std.</span>
+            <span class="chip chip--fill">↑ 480 Hm / ↓ 1.050 Hm</span>
+            <span class="chip chip--fill">Mittel</span>
+            <span class="chip chip--fill">Hütte: Ansbacher Hütte (1.720 m)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TOUR GUIDE: SECHS TOUREN ============ -->
+<section class="section" id="touren">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Sechs Touren, ein Land</p>
+      <h2>Wo Österreichs Steige am schönsten sind</h2>
+      <p>Von der Genussrunde bis zur alpinen Herausforderung — unsere Redaktion hat sechs Weitwanderwege und Rundtouren ausgesucht, die zeigen, wie unterschiedlich Österreich zu Fuß sein kann.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="card reveal">
+        <a href="#adlerweg" class="card-media ph zoom ratio-wide" data-theme="meadow" aria-label="Adlerweg entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=80" alt="Almwiese entlang des Adlerwegs in Tirol">
+          <span class="badge badge--brass">Mittel</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Weitwanderweg · Tirol</p>
+          <h3 class="card-title"><a href="#adlerweg">Adlerweg</a></h3>
+          <p class="card-excerpt">Von Kufstein bis ins Lechtal: 24 Etappen durch das ursprüngliche Tirol, in vier Portionen auch für ein langes Wochenende.</p>
+          <div class="card-meta"><span>24 Etappen</span><span class="dot"></span><span>Ø 800 Hm/Tag</span></div>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Berliner Höhenweg entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=900&q=80" alt="Hochalpiner Steig mit Gletscherblick im Zillertal">
+          <span class="badge badge--glow">Schwer</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Hochalpiner Höhenweg · Zillertal</p>
+          <h3 class="card-title"><a href="tirol.html">Berliner Höhenweg</a></h3>
+          <p class="card-excerpt">Der Klassiker unter den Höhenwegen — Gletscherblicke, Firnfelder und Hütten im Tagesabstand.</p>
+          <div class="card-meta"><span>6 Tage</span><span class="dot"></span><span>5.400 Hm gesamt</span></div>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <a href="seen.html" class="card-media ph zoom ratio-wide" data-theme="alpenglow" aria-label="Dachstein-Rundwanderung entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=900&q=80" alt="Dachstein-Gipfel im Alpenglühen">
+          <span class="badge badge--brass">Mittel</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Gletscherrunde · Salzkammergut</p>
+          <h3 class="card-title"><a href="seen.html">Dachstein-Rundwanderung</a></h3>
+          <p class="card-excerpt">Einmal rund um das Steinerne Meer, vorbei am ewigen Eis und mit Blick bis ins Alpenvorland.</p>
+          <div class="card-meta"><span>3 Tage</span><span class="dot"></span><span>1.200 Hm/Etappe</span></div>
+        </div>
+      </article>
+      <article class="card reveal d3">
+        <a href="magazin.html" class="card-media ph zoom ratio-wide" data-theme="pine" aria-label="Rax und Schneeberg entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=900&q=80" alt="Bergwald am Schneeberg in Niederösterreich">
+          <span class="badge badge--pine">Leicht</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Die Wiener Hausberge · NÖ</p>
+          <h3 class="card-title"><a href="magazin.html">Rax &amp; Schneeberg</a></h3>
+          <p class="card-excerpt">Nur eine Zugstunde von Wien, und vom Gipfelkreuz reicht der Blick doch bis zur Stadt zurück.</p>
+          <div class="card-meta"><span>5 Std. Gehzeit</span><span class="dot"></span><span>750 Hm</span></div>
+        </div>
+      </article>
+      <article class="card reveal d4">
+        <a href="tirol.html" class="card-media ph zoom ratio-wide" data-theme="lake" aria-label="5-Seen-Wanderung entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&w=900&q=80" alt="Klarer Bergsee auf der 5-Seen-Wanderung in Tirol">
+          <span class="badge badge--pine">Leicht</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">Familientour · Tirol</p>
+          <h3 class="card-title"><a href="tirol.html">5-Seen-Wanderung</a></h3>
+          <p class="card-excerpt">Fünf Bergseen an einem Nachmittag, sanfte Wege und ein Platscher für die Mutigen.</p>
+          <div class="card-meta"><span>4 Std. Gehzeit</span><span class="dot"></span><span>320 Hm</span></div>
+        </div>
+      </article>
+      <article class="card reveal d5">
+        <a href="salzburg.html" class="card-media ph zoom ratio-wide" data-theme="snow" aria-label="Großglockner-Runde entdecken">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=80" alt="Schneefelder rund um den Großglockner">
+          <span class="badge badge--glow">Schwer</span>
+        </a>
+        <div class="card-body">
+          <p class="card-kicker">König der Alpen · Hohe Tauern</p>
+          <h3 class="card-title"><a href="salzburg.html">Großglockner-Runde</a></h3>
+          <p class="card-excerpt">Rund um Österreichs höchsten Gipfel, mit Blick auf die Pasterze und die Gletscherwelt der Hohen Tauern.</p>
+          <div class="card-meta"><span>2 Tage</span><span class="dot"></span><span>1.450 Hm</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INTERACTIVE MAP ============ -->
+<section class="section section--dark" id="karte">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Interaktive Landkarte</p>
+      <h2>Die schönsten Wanderregionen auf einen Blick</h2>
+      <p>Von den schroffen Kalkwänden des Kaisergebirges bis zum ewigen Eis der Hohen Tauern — klicken Sie sich durch Österreichs Bergwelt.</p>
+    </div>
+    <div class="map-shell reveal">
+      <div class="map" data-map='{"center":[47.40,13.30],"zoom":7,"points":[
+        {"lat":47.5619,"lng":12.3006,"title":"Kaisergebirge · Tirol","kicker":"Etappenziel Nr. 1","type":"highlight","text":"Schroffe Kalkwände, sonnige Almen und der Start des Adlerwegs.","open":true},
+        {"lat":47.1652,"lng":11.8632,"title":"Zillertaler Alpen","kicker":"Gletscherpanorama","text":"Firnfelder, Dreitausender und der legendäre Berliner Höhenweg."},
+        {"lat":47.4753,"lng":13.6009,"title":"Dachstein","kicker":"Steinernes Meer","text":"Karstplateau, Gletscherreste und ein Rundblick bis ins Alpenvorland."},
+        {"lat":47.7203,"lng":15.8021,"title":"Rax &amp; Schneeberg","kicker":"Die Wiener Hausberge","text":"Nur eine Zugstunde von Wien — und schon mitten in den Alpen."},
+        {"lat":47.0742,"lng":12.6944,"title":"Hohe Tauern","kicker":"König der Alpen","text":"Österreichs höchster Gipfel, ewiges Eis und die große Großglockner-Runde."},
+        {"lat":47.4402,"lng":11.5814,"title":"Karwendel","kicker":"Größter Naturpark Tirols","text":"Wilde Kare, die Lamsenjochhütte und die Falkenhütte unter den Laliderer Wänden."}
+      ]}'></div>
+      <div class="map-legend">
+        <h4>Legende</h4>
+        <ul>
+          <li><span class="pin" style="background:#D98C74"></span> Etappenziel Nr. 1</li>
+          <li><span class="pin" style="background:#B08A4F"></span> Redaktions-Tipp</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ALMHÜTTEN & JAUSENSTATIONEN ============ -->
+<section class="section section--paper-2" id="huetten">
+  <div class="container container--wide">
+    <div class="section-head section-head--center reveal">
+      <p class="eyebrow eyebrow--center">Einkehr mit Aussicht</p>
+      <h2>Almhütten &amp; Jausenstationen</h2>
+      <p>Heuer empfehlen wir drei Hütten, die für sich selbst sprechen: urige Gaststuben, hausgemachte Kost und eine Aussicht, für die sich jeder Höhenmeter lohnt.</p>
+    </div>
+    <div class="grid grid-3">
+      <article class="hotel reveal">
+        <div class="hotel-media ph" data-theme="meadow">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=900&q=80" alt="Sonnige Almwiese vor der Gruttenhütte im Wilden Kaiser">
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Wilder Kaiser · 1.620 m</span>
+          <h3 class="hotel-name">Gruttenhütte</h3>
+          <p class="hotel-desc">Ein herzliches Griaß di an der Tür, dazu Kaspressknödelsuppe und ein Sonnendeck mit Blick auf die Kaisertürme.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 25 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+      <article class="hotel reveal d1">
+        <div class="hotel-media ph" data-theme="snow">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?auto=format&fit=crop&w=900&q=80" alt="Hochalpine Berliner Hütte mit Blick auf die Gletscherwelt">
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Zillertaler Alpen · 2.042 m</span>
+          <h3 class="hotel-name">Berliner Hütte</h3>
+          <p class="hotel-desc">Ein historisches Hüttenjuwel mit Blick aufs Waxegg-Kees, deftige Marend und Betten unterm Sternenzelt.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 32 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+      <article class="hotel reveal d2">
+        <div class="hotel-media ph" data-theme="pine">
+          <img class="ph-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=900&q=80" alt="Rustikale Falkenhütte unter den Laliderer Wänden im Karwendel">
+        </div>
+        <div class="hotel-body">
+          <span class="hotel-loc">Karwendel · 1.848 m</span>
+          <h3 class="hotel-name">Falkenhütte</h3>
+          <p class="hotel-desc">Gemütliche Stube unter den Laliderer Wänden, hausgemachter Kaiserschmarrn und Topfenstrudel wie bei der Oma.</p>
+          <div class="hotel-foot"><span class="hotel-price">€ 30 <small>/ Nacht</small></span><span class="link-more">Details</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BESTE WANDERZEIT ============ -->
+<section class="section" id="saison">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Die richtige Jahreszeit</p>
+      <h2>Wann der Berg am schönsten ruft</h2>
+      <p>Nicht jede Höhenlage ist zu jeder Zeit ein Genuss. Ein kleiner Überblick, damit die Tourenplanung heuer gleich gelingt.</p>
+    </div>
+    <div class="grid grid-4 mt-3">
+      <div class="stack-sm reveal">
+        <p class="overline-num">Frühling</p>
+        <h3>Talwege &amp; Blütenpracht</h3>
+        <p class="prose">Solange auf den Gipfeln noch Altschnee liegt, laden die tiefer gelegenen Talwege zum ersten Ausgehen ein.</p>
+        <div class="timeline-tags">
+          <span class="chip">Talwege eisfrei</span>
+          <span class="chip">Marillenblüte</span>
+          <span class="chip">Ruhige Steige</span>
+        </div>
+      </div>
+      <div class="stack-sm reveal d1">
+        <p class="overline-num">Sommer</p>
+        <h3>Hochtouren &amp; Gipfelglück</h3>
+        <p class="prose">Ab Juni öffnen die Hochalpenwege, die Tage sind lang, und selbst die Dreitausender werden erreichbar.</p>
+        <div class="timeline-tags">
+          <span class="chip">Hochtouren ab Juni</span>
+          <span class="chip">Lange Tage</span>
+          <span class="chip">Kühle Klammen</span>
+        </div>
+      </div>
+      <div class="stack-sm reveal d2">
+        <p class="overline-num">Herbst</p>
+        <h3>Goldene Fernsicht</h3>
+        <p class="prose">Klare Luft, kaum Touristen und der Almabtrieb — der Herbst ist heimlich die schönste Wanderzeit im Jahr.</p>
+        <div class="timeline-tags">
+          <span class="chip">Goldene Fernsicht</span>
+          <span class="chip">Almabtrieb</span>
+          <span class="chip">Ruhigere Wege</span>
+        </div>
+      </div>
+      <div class="stack-sm reveal d3">
+        <p class="overline-num">Winter</p>
+        <h3>Schneeschuh &amp; Stille</h3>
+        <p class="prose">Wenn die Hochwege ruhen, übernehmen Schneeschuhe die Almwege — kurze Tage, aber eine ganz eigene Stille.</p>
+        <div class="timeline-tags">
+          <span class="chip">Schneeschuhtouren</span>
+          <span class="chip">Verschneite Almen</span>
+          <span class="chip">Kurze Tage</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SICHERHEIT & TIPPS ============ -->
+<section class="section section--paper-2" id="sicherheit">
+  <div class="container container--narrow">
+    <p class="eyebrow reveal">Gut vorbereitet</p>
+    <h2 class="reveal d1 mt-1">Sicher unterwegs am Berg</h2>
+    <div class="prose mt-3 reveal d2">
+      <p>Der Berg verzeiht Leichtsinn selten. Festes Schuhwerk mit griffiger Sohle, ein Blick auf den aktuellen Wetterbericht und ausreichend Proviant gehören auf jede Tour — auch auf die vermeintlich leichte Runde zur Alm. Wolken, die sich rasch auftürmen, sind ein Grund umzukehren, nicht ein Grund, schneller zu gehen.</p>
+      <p>Sagen Sie jemandem Bescheid, welchen Steig Sie gehen und wann Sie zurück sein wollen. Im Notfall gilt die Bergrettung unter der Nummer 140 — Österreichs Bergretter sind rund um die Uhr im Einsatz, aber jede Minute zählt. Bleiben Sie auf markierten Wegen, auch wenn die Abkürzung verlockend aussieht.</p>
+      <p>Und dann ist da noch der Respekt vor der Natur: Weidezäune wieder schließen, Kühe in Ruhe lassen, keinen Müll zurücklassen. Der Lohn für all das ist der Einkehrschwung am Ende — ein Glaserl Buttermilch, ein Kaiserschmarrn, und das gute Gefühl, den Berg mit Respekt behandelt zu haben.</p>
+    </div>
+    <p class="pull-quote reveal d3 mt-3">Umkehren ist keine Schande, sondern die älteste Regel der Bergerfahrung.</p>
+    <div class="timeline-tags mt-3 reveal d4">
+      <span class="chip chip--fill">Wetterbericht checken</span>
+      <span class="chip chip--fill">Tourenplan hinterlassen</span>
+      <span class="chip chip--fill">Bergrettung 140</span>
+      <span class="chip chip--fill">Festes Schuhwerk</span>
+      <span class="chip chip--fill">Müll mitnehmen</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="galerie">
+  <div class="container container--wide">
+    <div class="section-head reveal">
+      <p class="eyebrow">Bildstrecke</p>
+      <h2>Der Berg in Bildern</h2>
+      <p>Nebelverhangene Wälder, goldene Gipfel und Hütten, die nach Holzfeuer duften — ein Klick genügt.</p>
+    </div>
+    <div class="gallery reveal">
+      <div class="gallery-item big ph" data-theme="alpenglow" data-lightbox data-full="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1600&q=80" data-cap="Serpentinenweg im Alpenglühen">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80" alt="Serpentinenweg im Alpenglühen">
+      </div>
+      <div class="gallery-item ph" data-theme="meadow" data-lightbox data-full="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=1600&q=80" data-cap="Blumenwiese am Wegesrand">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1425913397330-cf8af2ff40a1?auto=format&fit=crop&w=700&q=80" alt="Blumenwiese am Wegesrand">
+      </div>
+      <div class="gallery-item ph" data-theme="snow" data-lightbox data-full="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=1600&q=80" data-cap="Firnfeld kurz vor dem Gipfel">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?auto=format&fit=crop&w=700&q=80" alt="Firnfeld kurz vor dem Gipfel">
+      </div>
+      <div class="gallery-item wide ph" data-theme="lake" data-lightbox data-full="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1600&q=80" data-cap="Rast am Bergsee">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1439066615861-d1af74d74000?auto=format&fit=crop&w=1000&q=80" alt="Rast am Bergsee">
+      </div>
+      <div class="gallery-item ph" data-theme="pine" data-lightbox data-full="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=1600&q=80" data-cap="Urige Hütte am Waldrand">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1508739773434-c26b3d09e071?auto=format&fit=crop&w=700&q=80" alt="Urige Hütte am Waldrand">
+      </div>
+      <div class="gallery-item tall ph" data-theme="dusk" data-lightbox data-full="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1600&q=80" data-cap="Nebelstimmung im Hochwald">
+        <img class="ph-img" src="https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=700&q=80" alt="Nebelstimmung im Hochwald">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER ============ -->
+<section class="section section--dark newsletter newsletter--split">
+  <div class="container container--wide newsletter-inner">
+    <div class="reveal">
+      <p class="eyebrow">Die Post vom Berg</p>
+      <h2>Unser Newsletter</h2>
+      <p class="lead mt-1">Alle vierzehn Tage die schönsten Geschichten frisch ins Postfach.</p>
+    </div>
+    <form class="nl-form reveal d1" data-newsletter novalidate>
+      <div class="nl-row">
+        <input class="nl-input" type="email" name="email" placeholder="Ihre E-Mail-Adresse" aria-label="E-Mail-Adresse" required>
+        <button class="btn btn--primary" type="submit">Abonnieren <span class="arw">→</span></button>
+      </div>
+      <p class="nl-note">✓ Kein Spam. Nur guade Sachen. Jederzeit kündbar.</p>
+      <div class="nl-msg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container container--wide">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a class="brand" href="index.html">
+          <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
+            <circle cx="22" cy="10" r="3.4" fill="#CBAA6E"/>
+            <path d="M2 27 L12 11 L18 21 L21.5 15 L30 27 Z" fill="currentColor"/>
+            <path d="M12 11 L15.6 17 L13.2 20 L10 14.6 Z" fill="#B08A4F"/>
+          </svg>
+          <span class="brand-text"><span class="brand-name">Alpenglühen</span><span class="brand-sub">Das Österreich-Magazin</span></span>
+        </a>
+        <p class="footer-tagline">Reise, Genuss und Lebensart aus dem Herzen der Alpen. Servus &amp; pfiat di.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram">Ig</a><a href="#" aria-label="Facebook">Fb</a><a href="#" aria-label="Pinterest">Pt</a><a href="#" aria-label="YouTube">Yt</a>
+        </div>
+      </div>
+      <div class="footer-col"><h4>Regionen</h4><ul>
+        <li><a href="wien.html">Wien</a></li><li><a href="salzburg.html">Salzburg</a></li><li><a href="tirol.html">Tirol</a></li><li><a href="seen.html">Die Seen</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Erleben</h4><ul>
+        <li><a href="wandern.html">Wandern</a></li><li><a href="skifahren.html">Skifahren</a></li><li><a href="kulinarik.html">Kulinarik &amp; Kultur</a></li><li><a href="magazin.html">Magazin</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Service</h4><ul>
+        <li><a href="kontakt.html">Kontakt</a></li><li><a href="kontakt.html">Newsletter</a></li><li><a href="kontakt.html">Mediadaten</a></li><li><a href="kontakt.html">Impressum</a></li>
+      </ul></div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Alpenglühen Verlag · Wien. Alle Rechte vorbehalten.</span>
+      <div class="footer-bottom-links"><a href="kontakt.html">Datenschutz</a><a href="kontakt.html">Impressum</a><a href="kontakt.html">AGB</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

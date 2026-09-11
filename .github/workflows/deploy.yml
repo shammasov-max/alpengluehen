@@ -1,0 +1,46 @@
+name: deploy
+# main  -> production webroot ($DEPLOY_PATH)
+# other -> $PREVIEW_PATH/<branch-slug>, URL posted to the PR
+on:
+  push:
+    branches: ["**"]
+concurrency: deploy-${{ github.ref }}
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions: { contents: read, pull-requests: write }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Styleguide guard
+        run: node scripts/check.mjs
+      - name: Resolve target
+        id: t
+        run: |
+          if [ "${GITHUB_REF_NAME}" = "main" ]; then
+            echo "path=${{ secrets.DEPLOY_PATH }}" >> "$GITHUB_OUTPUT"
+            echo "url=${{ vars.SITE_URL }}" >> "$GITHUB_OUTPUT"
+          else
+            slug=$(echo "${GITHUB_REF_NAME}" | tr '/' '-' | tr -c 'a-zA-Z0-9-\n' '-' | tr 'A-Z' 'a-z')
+            echo "path=${{ secrets.PREVIEW_PATH }}/${slug}" >> "$GITHUB_OUTPUT"
+            echo "url=${{ vars.PREVIEW_URL }}/${slug}/" >> "$GITHUB_OUTPUT"
+          fi
+      - name: SSH key
+        run: |
+          mkdir -p ~/.ssh && chmod 700 ~/.ssh
+          echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
+          ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
+      - name: rsync
+        run: |
+          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "mkdir -p '${{ steps.t.outputs.path }}'"
+          rsync -az --delete \
+            --exclude '.git' --exclude '.github' --exclude '.claude' --exclude 'scripts' \
+            --exclude 'CLAUDE.md' --exclude 'STYLEGUIDE.md' --exclude 'DEPLOY.md' --exclude '.htmlvalidate.json' --exclude '.gitignore' \
+            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ steps.t.outputs.path }}/"
+      - name: Post preview URL
+        if: github.ref_name != 'main'
+        env: { GH_TOKEN: "${{ github.token }}" }
+        run: |
+          pr=$(gh pr list --head "${GITHUB_REF_NAME}" --json number -q '.[0].number' || true)
+          [ -n "$pr" ] && gh pr comment "$pr" --body "Vorschau: ${{ steps.t.outputs.url }} (commit ${GITHUB_SHA::7})" || true
