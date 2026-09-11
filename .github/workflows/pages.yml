@@ -1,0 +1,28 @@
+name: preview
+# dev branch -> GitHub Pages (preview site). Production (main) is deployed by deploy.yml.
+on:
+  push:
+    branches: [dev]
+  workflow_dispatch:
+permissions: { contents: read, pages: write, id-token: write }
+concurrency: { group: pages, cancel-in-progress: true }
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    environment: { name: github-pages, url: "${{ steps.d.outputs.page_url }}" }
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Styleguide guard
+        run: node scripts/check.mjs
+      - name: Collect site files
+        run: |
+          mkdir -p /tmp/dist
+          rsync -a --exclude '.git' --exclude '.github' --exclude '.claude' --exclude 'scripts' \
+            --exclude '*.md' --exclude '.htmlvalidate.json' --exclude '.gitignore' ./ /tmp/dist/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: /tmp/dist }
+      - id: d
+        uses: actions/deploy-pages@v4

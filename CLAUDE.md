@@ -19,11 +19,11 @@ Free per page (this is where "make it unique" lives):
 
 ## Workflow (three commands)
 
-Every edit lands on a branch, never directly on `main`. `main` is production.
+Two long-lived branches. `dev` = preview site (GitHub Pages, https://shammasov-max.github.io/alpengluehen/). `main` = production. All editing happens on `dev`; `main` only receives merges from `dev`.
 
-- `/preview` — "покажи", "zeig mir", "show me": branch → commit → push → CI builds a preview URL. Iterate here.
-- `/publish` — "обнови", "veröffentlichen", "publish": merge the current preview branch into `main` → production in ~1 min.
-- `/rollback` — "откати", "rückgängig", "roll back": revert the last publish on `main`.
+- `/preview` — "покажи", "zeig mir", "show me": commit on `dev` → push → Pages rebuilds (~1 min) → give the page URL. Iterate here as often as needed.
+- `/publish` — "обнови", "veröffentlichen", "publish": PR `dev` → `main`, merge → production.
+- `/rollback` — "откати", "rückgängig", "roll back": revert the last publish on `main`, sync `dev`.
 
 Before every commit run `node scripts/check.mjs` and fix what it reports. Never bypass it, never edit `scripts/check.mjs` to make it pass.
 
@@ -35,5 +35,5 @@ Before every commit run `node scripts/check.mjs` and fix what it reports. Never 
 
 ## Never
 - No secrets in the repo, in skills or in chat. Deployment keys live only in GitHub Actions secrets.
-- No direct push to `main`. No force-push. No deleting other branches than your own preview branch.
+- No direct push to `main` (it is protected; CI must pass). No force-push. Never delete `dev` or `main`.
 - No external scripts/CDNs beyond the ones already in `index.html` (Google Fonts, Leaflet).

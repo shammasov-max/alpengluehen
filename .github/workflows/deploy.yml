@@ -1,14 +1,12 @@
 name: deploy
-# main  -> production webroot ($DEPLOY_PATH)
-# other -> $PREVIEW_PATH/<branch-slug>, URL posted to the PR
+# main -> production webroot on the VPS via rsync. Skips until DEPLOY_* secrets exist (see DEPLOY.md).
 on:
   push:
-    branches: ["**"]
-concurrency: deploy-${{ github.ref }}
+    branches: [main]
+concurrency: deploy-prod
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions: { contents: read, pull-requests: write }
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -19,19 +17,7 @@ jobs:
         id: s
         env: { H: "${{ secrets.DEPLOY_HOST }}" }
         run: |
-          if [ -z "$H" ]; then echo "::notice::DEPLOY_* secrets not set — deploy skipped (see DEPLOY.md)"; echo "ok=false" >> "$GITHUB_OUTPUT"; else echo "ok=true" >> "$GITHUB_OUTPUT"; fi
-      - name: Resolve target
-        id: t
-        if: steps.s.outputs.ok == 'true'
-        run: |
-          if [ "${GITHUB_REF_NAME}" = "main" ]; then
-            echo "path=${{ secrets.DEPLOY_PATH }}" >> "$GITHUB_OUTPUT"
-            echo "url=${{ vars.SITE_URL }}" >> "$GITHUB_OUTPUT"
-          else
-            slug=$(echo "${GITHUB_REF_NAME}" | tr '/' '-' | tr -c 'a-zA-Z0-9-\n' '-' | tr 'A-Z' 'a-z')
-            echo "path=${{ secrets.PREVIEW_PATH }}/${slug}" >> "$GITHUB_OUTPUT"
-            echo "url=${{ vars.PREVIEW_URL }}/${slug}/" >> "$GITHUB_OUTPUT"
-          fi
+          if [ -z "$H" ]; then echo "::notice::DEPLOY_* secrets not set — production deploy skipped (see DEPLOY.md)"; echo "ok=false" >> "$GITHUB_OUTPUT"; else echo "ok=true" >> "$GITHUB_OUTPUT"; fi
       - name: SSH key
         if: steps.s.outputs.ok == 'true'
         run: |
@@ -41,14 +27,7 @@ jobs:
       - name: rsync
         if: steps.s.outputs.ok == 'true'
         run: |
-          ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "mkdir -p '${{ steps.t.outputs.path }}'"
           rsync -az --delete \
             --exclude '.git' --exclude '.github' --exclude '.claude' --exclude 'scripts' \
-            --exclude 'CLAUDE.md' --exclude 'STYLEGUIDE.md' --exclude 'DEPLOY.md' --exclude '.htmlvalidate.json' --exclude '.gitignore' \
-            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ steps.t.outputs.path }}/"
-      - name: Post preview URL
-        if: steps.s.outputs.ok == 'true' && github.ref_name != 'main'
-        env: { GH_TOKEN: "${{ github.token }}" }
-        run: |
-          pr=$(gh pr list --head "${GITHUB_REF_NAME}" --json number -q '.[0].number' || true)
-          [ -n "$pr" ] && gh pr comment "$pr" --body "Vorschau: ${{ steps.t.outputs.url }} (commit ${GITHUB_SHA::7})" || true
+            --exclude '*.md' --exclude '.htmlvalidate.json' --exclude '.gitignore' \
+            ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ secrets.DEPLOY_PATH }}/"
