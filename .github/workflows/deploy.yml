@@ -15,8 +15,14 @@ jobs:
         with: { node-version: 22 }
       - name: Styleguide guard
         run: node scripts/check.mjs
+      - name: Secrets present?
+        id: s
+        env: { H: "${{ secrets.DEPLOY_HOST }}" }
+        run: |
+          if [ -z "$H" ]; then echo "::notice::DEPLOY_* secrets not set — deploy skipped (see DEPLOY.md)"; echo "ok=false" >> "$GITHUB_OUTPUT"; else echo "ok=true" >> "$GITHUB_OUTPUT"; fi
       - name: Resolve target
         id: t
+        if: steps.s.outputs.ok == 'true'
         run: |
           if [ "${GITHUB_REF_NAME}" = "main" ]; then
             echo "path=${{ secrets.DEPLOY_PATH }}" >> "$GITHUB_OUTPUT"
@@ -27,11 +33,13 @@ jobs:
             echo "url=${{ vars.PREVIEW_URL }}/${slug}/" >> "$GITHUB_OUTPUT"
           fi
       - name: SSH key
+        if: steps.s.outputs.ok == 'true'
         run: |
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
           echo "${{ secrets.DEPLOY_SSH_KEY }}" > ~/.ssh/id_ed25519 && chmod 600 ~/.ssh/id_ed25519
           ssh-keyscan -H "${{ secrets.DEPLOY_HOST }}" >> ~/.ssh/known_hosts
       - name: rsync
+        if: steps.s.outputs.ok == 'true'
         run: |
           ssh "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}" "mkdir -p '${{ steps.t.outputs.path }}'"
           rsync -az --delete \
@@ -39,7 +47,7 @@ jobs:
             --exclude 'CLAUDE.md' --exclude 'STYLEGUIDE.md' --exclude 'DEPLOY.md' --exclude '.htmlvalidate.json' --exclude '.gitignore' \
             ./ "${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:${{ steps.t.outputs.path }}/"
       - name: Post preview URL
-        if: github.ref_name != 'main'
+        if: steps.s.outputs.ok == 'true' && github.ref_name != 'main'
         env: { GH_TOKEN: "${{ github.token }}" }
         run: |
           pr=$(gh pr list --head "${GITHUB_REF_NAME}" --json number -q '.[0].number' || true)
