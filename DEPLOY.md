@@ -20,10 +20,5 @@ DNS: `alpengluehen.at` → IP VPS. TLS — certbot.
 Secrets: `DEPLOY_HOST`, `DEPLOY_USER=deploy`, `DEPLOY_SSH_KEY` (приватный ключ), `DEPLOY_PATH=/var/www/alpengluehen`.
 Branch protection на `main` уже включена: status check `check`, no force-push. Клиент — collaborator с write, работает только в `dev`.
 
-Уборка старых превью на сервере (cron раз в день):
-```bash
-find /var/www/preview -mindepth 1 -maxdepth 1 -type d -mtime +14 -exec rm -rf {} +
-```
-
 ## Клиент
 Claude (claude.ai/code или desktop) + GitHub-аккаунт с доступом к репо. Команды: «покажи» / «обнови» / «откати». Секретов у клиента нет: деплой делает Actions.
